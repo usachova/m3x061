@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+{% include 'mysite/head.html' %}
+<body>
+    {% block header %}{% endblock %}
+    {% include 'mysite/navbar.html' %}
+    {% block aside %}{% endblock %}
+    {% block main %}{% endblock %}
+</body>
+{% include 'mysite/footer.html' %}
+</html>
