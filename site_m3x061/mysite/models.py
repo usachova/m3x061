@@ -1,20 +1,20 @@
 from django.db import models
 
-from django.db import models
-from django.contrib.auth.models import User
-from django.utils import timezone
+# from django.contrib.auth.models import User
+# from django.utils import timezone
 
 
-# class Post(models.Model):
-#     h1 = models.CharField(max_length=200)
-#     title = models.CharField(max_length=200)
-#     url = models.SlugField()
-#     description = models.TextField()
-#     content = models.TextField()
-#     image = models.ImageField()
-#     created_at = models.DateField(default=timezone.now)
-#     author = models.ForeignKey(User, on_delete=models.CASCADE)
-#     tag = models.CharField(max_length=200)
-#
-#     def __str__(self):
-#         return self.title
+class Subject(models.Model):
+    h1 = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
+    сontrol_type = models.CharField(max_length=200)
+    lector = models.CharField(max_length=200)
+    lector_isu = models.CharField(max_length=200)
+    content_lectures = models.TextField()
+    practice = models.CharField(max_length=200)
+    practice_isu = models.CharField(max_length=200)
+    content_practice = models.TextField()
+    deadlines = models.TextField()
+
+    def __str__(self):
+        return self.title
