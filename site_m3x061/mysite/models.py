@@ -5,16 +5,16 @@ from django.db import models
 
 
 class Subject(models.Model):
-    h1 = models.CharField(max_length=200)
+    # h1 = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
     сontrol_type = models.CharField(max_length=200)
     lector = models.CharField(max_length=200)
     lector_isu = models.CharField(max_length=200)
-    content_lectures = models.TextField()
+    # content_lectures = models.TextField()
     practice = models.CharField(max_length=200)
     practice_isu = models.CharField(max_length=200)
-    content_practice = models.TextField()
-    deadlines = models.TextField()
+    # content_practice = models.TextField()
+    # deadlines = models.TextField()
 
     def __str__(self):
         return self.title
