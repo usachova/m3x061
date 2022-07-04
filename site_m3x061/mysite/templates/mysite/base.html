@@ -3,8 +3,15 @@
 <html lang="ru">
 {% include 'mysite/head.html' %}
 <body>
-    {% block header %}{% endblock %}
-    {% include 'mysite/navbar.html' %}
+    <header id="header">
+        <h1>{% block header %}{% endblock %}</h1>
+    </header>
+    <nav id="nav">
+        <p><a href="{% url 'home' %}">Стартовая страница</a></p>
+        {% for subject in subjects %}
+            <p><a href="{% url 'subject_detail' subject.slug %}">{{ subject.title }}</a></p>
+        {% endfor %}
+    </nav>
     {% block aside %}{% endblock %}
     {% block main %}{% endblock %}
 </body>
