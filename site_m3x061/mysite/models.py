@@ -5,7 +5,7 @@ from django.db import models
 
 
 class Subject(models.Model):
-    # h1 = models.CharField(max_length=200)
+    slug = models.CharField(max_length=25)
     title = models.CharField(max_length=200)
     сontrol_type = models.CharField(max_length=200)
     lector = models.CharField(max_length=200)
